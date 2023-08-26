@@ -1,10 +1,20 @@
 {
-  "name": "navia",
-  "packageManager": "yarn@3.5.1",
-  "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
-    "prettier": "^3.0.2",
-    "tsup": "^7.2.0",
-    "typescript": "^5.2.2"
-  }
+    "name": "navia",
+    "packageManager": "yarn@3.5.1",
+    "main": "build/index.js",
+    "scripts": {
+        "start": "node .",
+        "build": "tsup"
+    },
+    "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+        "prettier": "^3.0.2",
+        "tsup": "^7.2.0",
+        "typescript": "^5.2.2"
+    },
+    "dependencies": {
+        "@sapphire/framework": "^4.5.3",
+        "discord.js": "14.x",
+        "dotenv": "^16.3.1"
+    }
 }
