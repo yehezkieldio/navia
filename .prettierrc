@@ -9,7 +9,7 @@
     "printWidth": 120,
     "importOrderParserPlugins": ["typescript", "decorators-legacy"],
     "plugins": ["@trivago/prettier-plugin-sort-imports"],
-    "importOrder": ["^[./]", "^@sapphire/(.*)$"],
+    "importOrder": ["^[./]", "^@sapphire/(.*)$", "^#(.*)$"],
     "importOrderSeparation": true,
     "importOrderSortSpecifiers": true
 }
