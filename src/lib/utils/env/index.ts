@@ -1,3 +1,3 @@
 export * from "./env";
-export * from "./loader";
-export * from "./schema";
+export * from "./env.loader";
+export * from "./env.schema";

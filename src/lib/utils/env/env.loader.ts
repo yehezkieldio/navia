@@ -1,6 +1,6 @@
 import { config as DotenvConfig, DotenvParseOutput } from "dotenv";
 
-import { schema } from "./schema";
+import { schema } from "./env.schema";
 
 class EnvironmentLoader {
     private parsedEnv: DotenvParseOutput;
