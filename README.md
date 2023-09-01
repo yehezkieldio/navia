@@ -5,7 +5,7 @@
    <img src="https://sonarcloud.io/api/project_badges/measure?project=elizielx_navia&metric=alert_status" align="center"/>
    </a>
    <a href="https://github.com/elizielx/navia/actions/workflows/ci.yml">
-   <img src="https://img.shields.io/github/actions/workflow/status/elizielx/navia/ci.yml" align="center"/>
+   <img src="https://img.shields.io/github/actions/workflow/status/elizielx/navia/ci.yml?logo=github" align="center"/>
    </a>
 </div>
 
