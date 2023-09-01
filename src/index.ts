@@ -8,5 +8,4 @@ import { options } from "./options";
 const main = Effect.all([Effect.config(Config.string("DISCORD_BOT_TOKEN"))]).pipe(
     Effect.flatMap(([token]) => Effect.sync(() => new NaviaClient(options).login(token)))
 );
-
 Effect.runSync(main);

@@ -543,7 +543,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/discord.js-utilities@npm:^7.0.1":
+"@sapphire/discord.js-utilities@npm:^7.0.1, @sapphire/discord.js-utilities@npm:^7.0.2":
   version: 7.0.2
   resolution: "@sapphire/discord.js-utilities@npm:7.0.2"
   dependencies:
@@ -596,6 +596,16 @@ __metadata:
     "@sapphire/utilities": ^3.13.0
     tslib: ^2.6.0
   checksum: d2187527766c892604b6e49a1d487b58e59b3053ae37b65662705d918d1822e6a818fa6df7eea44a46e9960c4f411abe5e132d4874c445df56ed3211d950d300
+  languageName: node
+  linkType: hard
+
+"@sapphire/plugin-subcommands@npm:^4.2.1":
+  version: 4.2.1
+  resolution: "@sapphire/plugin-subcommands@npm:4.2.1"
+  dependencies:
+    "@sapphire/utilities": ^3.13.0
+    tslib: ^2.6.2
+  checksum: 046ad26109b78c9a1a1904894ed9af864ae97847519ed680b67733378998df288d82d0c48b6e317bce312f78b971a309f83aef340bc4b32e070108850e787cad
   languageName: node
   linkType: hard
 
@@ -1935,7 +1945,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "navia@workspace:."
   dependencies:
+    "@sapphire/discord.js-utilities": ^7.0.2
     "@sapphire/framework": ^4.5.3
+    "@sapphire/plugin-subcommands": ^4.2.1
+    "@sapphire/utilities": ^3.13.0
     "@trivago/prettier-plugin-sort-imports": ^4.2.0
     discord.js: ^14.13.0
     dotenv: ^16.3.1
