@@ -3,12 +3,11 @@
    <br/>
 </div>
 
-### Navia
+## Navia
 
 Navia is here as yet another multipurpose Discord bot, there's already a lot of them - but why not more? Built with TypeScript and utilizes the [Sapphire](https://www.sapphirejs.com/) framework.
 
-[!NOTE]  
-It's currently a side project of mine, so it's not as polished as I'd like it to be, but it's still functional. I'm working on it in my free time or when I'm bored, so it's not a priority. I'm also using it as a way to learn new things, so it's a bit of a mess. I'm trying to keep it as clean as possible, but it's still a mess.
+> Navia is current a side-hobby project of mine. I'm working on it in my free time or when I'm bored, so it's not a priority. I'm also using it as a way to learn new things, so it's a bit of a mess. I'm trying to keep it as clean as possible, but it's still a mess.
 
 ### License
 
