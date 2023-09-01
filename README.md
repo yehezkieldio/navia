@@ -17,4 +17,4 @@ Navia is here as yet another multipurpose Discord bot, there's already a lot of 
 
 ### License
 
-Imperia is licensed under the [MIT License](LICENSE).
+Navia is licensed under the [MIT License](LICENSE).
