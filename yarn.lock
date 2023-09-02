@@ -687,6 +687,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sapphire/plugin-logger@npm:^3.0.6":
+  version: 3.0.6
+  resolution: "@sapphire/plugin-logger@npm:3.0.6"
+  dependencies:
+    "@sapphire/timestamp": ^1.0.1
+    colorette: ^2.0.20
+  checksum: 18bb5726a52595aaae7bcd07ec367d5c7ba78fc9eb38c45f84427f67efd2c8066c64f06a67af483489d0dd6866cb7b75a16ad37ceee10d76b30c47fe117fb351
+  languageName: node
+  linkType: hard
+
 "@sapphire/plugin-subcommands@npm:^4.2.1":
   version: 4.2.1
   resolution: "@sapphire/plugin-subcommands@npm:4.2.1"
@@ -734,6 +744,13 @@ __metadata:
   dependencies:
     tslib: ^2.4.0
   checksum: 23c013598d87d2fcc797efe5d2409ae6836b9221d79eacc10b7c2a95f9d694b562b7ad027dc49e9e8125095417199385a15317520fec371bdb8cc7622085e3af
+  languageName: node
+  linkType: hard
+
+"@sapphire/timestamp@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@sapphire/timestamp@npm:1.0.1"
+  checksum: 40320946cb8fcbbb610b94019882eb39c900b9af87e4a2d173299efaa062921662d950780c273fd44f4ec9877983d725d28f0b999314f338f3bfc0ab3c45a8cb
   languageName: node
   linkType: hard
 
@@ -2822,11 +2839,13 @@ __metadata:
   dependencies:
     "@sapphire/discord.js-utilities": ^7.0.2
     "@sapphire/framework": ^4.5.3
+    "@sapphire/plugin-logger": ^3.0.6
     "@sapphire/plugin-subcommands": ^4.2.1
     "@sapphire/utilities": ^3.13.0
     "@trivago/prettier-plugin-sort-imports": ^4.2.0
     "@typescript-eslint/eslint-plugin": ^6.5.0
     "@typescript-eslint/parser": ^6.5.0
+    colorette: ^2.0.20
     discord.js: ^14.13.0
     dotenv: ^16.3.1
     effect: ^2.0.0-next.30

@@ -1,4 +1,4 @@
-import { GatewayIntentBits, Partials } from "discord.js";
+import { ActivityType, GatewayIntentBits, Partials } from "discord.js";
 import { Config, Effect } from "effect";
 
 import { LogLevel } from "@sapphire/framework";
@@ -7,6 +7,7 @@ import { NaviaClientOptions } from "@~/lib/extensions/client.extension";
 
 const generateOptions = Effect.gen(function* (_) {
     const defaultPrefix = yield* _(Effect.config(Config.string("DEFAULT_PREFIX")));
+    const nodeEnv = yield* _(Effect.config(Config.string("NODE_ENV")));
 
     return {
         allowedMentions: {
@@ -20,7 +21,16 @@ const generateOptions = Effect.gen(function* (_) {
         defaultPrefix: defaultPrefix ?? "navia!",
         typing: true,
         logger: {
-            level: LogLevel.Debug,
+            level: nodeEnv === "production" ? LogLevel.Info : LogLevel.Debug,
+        },
+        presence: {
+            activities: [
+                {
+                    type: ActivityType.Playing,
+                    name: "with my creator ✨",
+                },
+            ],
+            status: "dnd",
         },
     } as NaviaClientOptions;
 });
