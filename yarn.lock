@@ -1685,6 +1685,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-sonarjs@npm:^0.21.0":
+  version: 0.21.0
+  resolution: "eslint-plugin-sonarjs@npm:0.21.0"
+  peerDependencies:
+    eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
+  checksum: c4d9de638a9ea6cc604355b02bc76819f811a3e20eb19bfc5741e3ad959721b573c9808b47e6aea4a6ce2d32101f42f2237f4d9c53230615c34afbf4ed6f69ea
+  languageName: node
+  linkType: hard
+
 "eslint-plugin-unused-imports@npm:^3.0.0":
   version: 3.0.0
   resolution: "eslint-plugin-unused-imports@npm:3.0.0"
@@ -2851,6 +2860,7 @@ __metadata:
     effect: ^2.0.0-next.30
     eslint: ^8.48.0
     eslint-plugin-prettier: ^5.0.0
+    eslint-plugin-sonarjs: ^0.21.0
     eslint-plugin-unused-imports: ^3.0.0
     lint-staged: ^14.0.1
     prettier: ^3.0.3
