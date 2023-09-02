@@ -1,8 +1,4 @@
 {
     "typescript.preferences.importModuleSpecifier": "non-relative",
-    "typescript.tsdk": "node_modules/typescript/lib",
-    "sonarlint.connectedMode.project": {
-        "connectionId": "elizielx",
-        "projectKey": "elizielx_navia"
-    }
+    "typescript.tsdk": "node_modules/typescript/lib"
 }

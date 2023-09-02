@@ -1,9 +1,6 @@
 <div align="center">
    <img src=".github/assets/banner.png" alt="banner"/>
    <br/>
-    <a href="https://sonarcloud.io/project/overview?id=elizielx_navia">
-   <img src="https://sonarcloud.io/api/project_badges/measure?project=elizielx_navia&metric=alert_status" align="center"/>
-   </a>
    <a href="https://github.com/elizielx/navia/actions/workflows/ci.yml">
    <img src="https://img.shields.io/github/actions/workflow/status/elizielx/navia/ci.yml?logo=github" align="center"/>
    </a>
