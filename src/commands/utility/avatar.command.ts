@@ -4,7 +4,7 @@ import { Args, RegisterBehavior } from "@sapphire/framework";
 
 import { NaviaCommand } from "@~/lib/extensions/command.extension";
 
-export class PingCommand extends NaviaCommand {
+export class AvatarCommand extends NaviaCommand {
     constructor(context: NaviaCommand.Context, options: NaviaCommand.Options) {
         super(context, {
             ...options,
