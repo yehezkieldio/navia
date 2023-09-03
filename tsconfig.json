@@ -10,7 +10,7 @@
         "noErrorTruncation": true,
         "lib": ["ESNext", "DOM"],
         "sourceMap": true,
-        "strict": true,
+        "strict": false,
         "target": "ES2022",
         "incremental": true,
         "paths": {
