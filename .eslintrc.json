@@ -12,6 +12,7 @@
     },
     "plugins": ["prettier", "@typescript-eslint"],
     "rules": {
+        "@typescript-eslint/no-unused-vars": "warn",
         "@typescript-eslint/no-namespace": "off",
         "@typescript-eslint/ban-ts-comment": "off",
         "arrow-spacing": ["warn", { "before": true, "after": true }],
@@ -34,7 +35,7 @@
         "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1, "maxBOF": 0 }],
         "no-shadow": ["error", { "allow": ["err", "resolve", "reject"] }],
         "no-trailing-spaces": ["error"],
-        "no-var": "error",
+        "no-var": "warn",
         "object-curly-spacing": ["error", "always"],
         "prefer-const": "error",
         "prettier/prettier": "error",

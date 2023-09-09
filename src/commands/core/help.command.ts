@@ -1,4 +1,5 @@
 import { ComponentType, Message, SlashCommandBuilder, chatInputApplicationCommandMention } from "discord.js";
+import { Effect, pipe } from "effect";
 
 import { PaginatedMessage } from "@sapphire/discord.js-utilities";
 import { Command, CommandStore, RegisterBehavior } from "@sapphire/framework";
@@ -27,80 +28,124 @@ export class HelpCommand extends NaviaCommand {
     }
 
     async chatInputRun(interaction: NaviaCommand.ChatInputCommandInteraction) {
-        return await this.buildCommands(interaction);
+        return Effect.runSync(this.buildCommands(interaction));
     }
 
     async messageRun(message: Message) {
-        return await this.buildCommands(message);
+        return Effect.runSync(this.buildCommands(message));
     }
 
-    private async buildCommands(ctx: Message | NaviaCommand.ChatInputCommandInteraction) {
-        const paginate: PaginatedMessage = new PaginatedMessage();
-        const commands: CommandStore = this.container.stores.get("commands");
-        const categories: (string | null)[] = [...new Set(commands.map((cmd: Command) => cmd.category))];
-        categories.unshift("primary");
+    private buildCommands(ctx: Message | NaviaCommand.ChatInputCommandInteraction) {
+        const pagination = Effect.sync(() => new PaginatedMessage());
+        const commands = Effect.sync(() => this.container.stores.get("commands"));
+        const categoriesPipe = pipe(
+            Effect.map(commands, (cmds: CommandStore) => {
+                const categories = [...new Set(cmds.map((cmd: Command) => cmd.category))];
+                categories.unshift("primary");
 
-        paginate.addPageEmbed((embed) => {
-            embed.setTitle("Hi-ya! I'm Navia.");
-            embed.setDescription(
-                "Navia is here as yet another multipurpose Discord bot, there's already a lot of them - but why not more? Navia supports both slash commands and message commands, but it is recommended to use slash commands.\n\n**Navia is currently a side-hobby project of elizielx. I'm working on it in my free time or when I'm bored, so it's not a priority.**"
-            );
-            return embed;
-        });
-
-        for (const category of categories) {
-            if (category === "primary") continue;
-
-            const categoryCommands = commands.filter((cmd: Command): boolean => cmd.category === category);
-            const fields = categoryCommands.map((cmd: Command) => cmd);
-
-            const commandFields = fields.map((cmd: Command) => {
-                let command;
-                const commandId = this.container.applicationCommandRegistries.acquire(cmd.name).globalCommandId;
-
-                if (!commandId) {
-                    command = `/${cmd.name}`;
-                } else {
-                    command = chatInputApplicationCommandMention(cmd.name, commandId);
-                }
-
-                return { name: command, value: cmd.description, inline: true };
-            });
-
-            paginate.addPageEmbed((embed) => {
-                embed.setTitle(`Viewing ${category.charAt(0).toUpperCase() + category.slice(1)} commands.`);
-                embed.addFields(commandFields);
-                return embed;
-            });
-        }
-
-        const selectMenuOptions = [];
-
-        selectMenuOptions.push(
-            ...categories.map((category) => ({
-                label: category.charAt(0).toUpperCase() + category.slice(1),
-                description:
-                    category === "primary"
-                        ? "View the primary page."
-                        : `View ${category.charAt(0).toUpperCase() + category.slice(1)}-related commands.`,
-                value: category,
-            }))
+                return categories;
+            })
         );
 
-        paginate.setActions([
-            {
-                customId: "help-command-experimental",
-                type: ComponentType.StringSelect,
-                options: selectMenuOptions,
-                placeholder: "Select a category...",
-                run: ({ handler, interaction }) => {
-                    if (interaction.isStringSelectMenu()) {
-                        handler.index = categories.indexOf(interaction.values[0]);
-                    }
-                },
-            },
-        ]);
+        const primaryPage = (_pagination: Effect.Effect<never, never, PaginatedMessage>) => {
+            return Effect.runSync(
+                Effect.map(_pagination, (paginate) => {
+                    paginate.addPageEmbed((embed) => {
+                        embed.setTitle("Hi-ya! I'm Navia.");
+                        embed.setDescription(
+                            "Navia is here as yet another multipurpose Discord bot, there's already a lot of them - but why not more? Navia supports both slash commands and message commands, but it is recommended to use slash commands.\n\n**Navia is currently a side-hobby project of elizielx. I'm working on it in my free time or when I'm bored, so it's not a priority.**"
+                        );
+                        return embed;
+                    });
+                    return Effect.sync(() => paginate);
+                })
+            );
+        };
+        const commandsPage = (_pagination: Effect.Effect<never, never, PaginatedMessage>) => {
+            return Effect.runSync(
+                Effect.all([commands, categoriesPipe, _pagination]).pipe(
+                    Effect.map(([cmds, categories, paginate]) => {
+                        return Effect.forEach(categories, (category) => {
+                            if (category === "primary") return Effect.sync(() => paginate);
 
-        return paginate.run(ctx);
+                            const categoryCommands = cmds.filter((cmd: Command): boolean => cmd.category === category);
+                            const fields = categoryCommands.map((cmd: Command) => cmd);
+
+                            const commandFields = fields.map((cmd: Command) => {
+                                let command: string;
+                                const commandId = this.container.applicationCommandRegistries.acquire(
+                                    cmd.name
+                                ).globalCommandId;
+
+                                if (!commandId) {
+                                    command = `/${cmd.name}`;
+                                } else {
+                                    command = chatInputApplicationCommandMention(cmd.name, commandId);
+                                }
+
+                                return { name: command, value: cmd.description, inline: true };
+                            });
+
+                            paginate.addPageEmbed((embed) => {
+                                embed.setTitle(
+                                    `Viewing ${category.charAt(0).toUpperCase() + category.slice(1)} commands.`
+                                );
+                                embed.addFields(commandFields);
+                                return embed;
+                            });
+
+                            return Effect.sync(() => paginate);
+                        }).pipe(Effect.map(() => paginate));
+                    })
+                )
+            );
+        };
+        const selectMenuOptionsPipe = (_pagination: Effect.Effect<never, never, PaginatedMessage>) => {
+            return Effect.runSync(
+                Effect.all([categoriesPipe, _pagination]).pipe(
+                    Effect.map(([categories, paginate]) => {
+                        const selectMenuOptions = [];
+
+                        selectMenuOptions.push(
+                            ...categories.map((category) => ({
+                                label: category.charAt(0).toUpperCase() + category.slice(1),
+                                description:
+                                    category === "primary"
+                                        ? "View the primary page."
+                                        : `View ${
+                                              category.charAt(0).toUpperCase() + category.slice(1)
+                                          }-related commands.`,
+                                value: category,
+                            }))
+                        );
+
+                        paginate.setActions([
+                            {
+                                customId: "help-command-select-menu",
+                                type: ComponentType.StringSelect,
+                                options: selectMenuOptions,
+                                placeholder: "Select a category...",
+                                run: ({ handler, interaction }) => {
+                                    if (interaction.isStringSelectMenu()) {
+                                        handler.index = categories.indexOf(interaction.values[0]);
+                                    }
+                                },
+                            },
+                        ]);
+
+                        return Effect.sync(() => paginate);
+                    })
+                )
+            );
+        };
+        const runPagination = (_pagination: Effect.Effect<never, never, PaginatedMessage>) => {
+            return Effect.runSync(
+                Effect.map(_pagination, (paginate) => {
+                    return Effect.sync(() => paginate.run(ctx));
+                })
+            );
+        };
+
+        return pipe(pagination, primaryPage, commandsPage, selectMenuOptionsPipe, runPagination);
     }
 }

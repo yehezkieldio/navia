@@ -34,4 +34,5 @@ const generateOptions = Effect.gen(function* (_) {
         },
     } as NaviaClientOptions;
 });
+
 export const options = Effect.runSync(generateOptions);
