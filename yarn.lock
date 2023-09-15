@@ -243,12 +243,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@effect/io@npm:^0.40.1":
-  version: 0.40.1
-  resolution: "@effect/io@npm:0.40.1"
+"@effect/io@npm:^0.40.3":
+  version: 0.40.3
+  resolution: "@effect/io@npm:0.40.3"
   peerDependencies:
     "@effect/data": ^0.18.5
-  checksum: 4d789987bf13bad15401c0498f16362f810945c26efadf84d1c3d4e1ede137ba8445dbd88d77931584a6636cccae8718078dc3dd4cbfbb181eeb6c45765f073b
+  checksum: 1add88b51ae9c1943210e153da30fc564aca98419ef7f4303c908b7f1e1062045ad4925a961a54aacdc030988d88a6d81781260acf74a161f0422887253cf771
   languageName: node
   linkType: hard
 
@@ -271,13 +271,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@effect/stream@npm:^0.36.0":
-  version: 0.36.0
-  resolution: "@effect/stream@npm:0.36.0"
+"@effect/stream@npm:^0.36.1":
+  version: 0.36.1
+  resolution: "@effect/stream@npm:0.36.1"
   peerDependencies:
     "@effect/data": ^0.18.3
     "@effect/io": ^0.40.0
-  checksum: 2aedcdd8b656205652c203997dc1f3df0b4e4ade0cae2d40725e5a00242cd21f0916b85426221fe2dd326958fe4fdf43777d1abb8e63175583895fd8b49f1dc0
+  checksum: 982a5df8da8e4d17247881da8920becb497a3b356bd2d7d12420108c8a3be8ea2bb19d6321e5618a66b6a643e934c32728f3771690e4463f6daae85020d8e50e
   languageName: node
   linkType: hard
 
@@ -1520,21 +1520,21 @@ __metadata:
   linkType: hard
 
 "effect@npm:^2.0.0-next.30":
-  version: 2.0.0-next.33
-  resolution: "effect@npm:2.0.0-next.33"
+  version: 2.0.0-next.34
+  resolution: "effect@npm:2.0.0-next.34"
   dependencies:
     "@effect/data": ^0.18.5
-    "@effect/io": ^0.40.1
+    "@effect/io": ^0.40.3
     "@effect/match": ^0.35.2
     "@effect/stm": ^0.24.0
-    "@effect/stream": ^0.36.0
+    "@effect/stream": ^0.36.1
   peerDependencies:
     "@effect/data": ^0.18.5
-    "@effect/io": ^0.40.1
+    "@effect/io": ^0.40.3
     "@effect/match": ^0.35.2
     "@effect/stm": ^0.24.0
-    "@effect/stream": ^0.36.0
-  checksum: d2f8086f20c7e3e3f1bc8f4e86bcb9db89eaa38982dd9999a7987844e488a77a2677341a4a2cfe8497d0a3de2163906b9542d758929ca1804b7477a6fcd86b3f
+    "@effect/stream": ^0.36.1
+  checksum: a5cde306a52d8124383004749be053d0f4989e84f4108971787effeeef6f77f2f8c0eb6062baaeace3f4278ae0a882aa487ff2ca9940f89eb0cab0bdf941c53c
   languageName: node
   linkType: hard
 
