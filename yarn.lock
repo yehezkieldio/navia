@@ -1520,8 +1520,8 @@ __metadata:
   linkType: hard
 
 "effect@npm:^2.0.0-next.30":
-  version: 2.0.0-next.32
-  resolution: "effect@npm:2.0.0-next.32"
+  version: 2.0.0-next.33
+  resolution: "effect@npm:2.0.0-next.33"
   dependencies:
     "@effect/data": ^0.18.5
     "@effect/io": ^0.40.1
@@ -1534,7 +1534,7 @@ __metadata:
     "@effect/match": ^0.35.2
     "@effect/stm": ^0.24.0
     "@effect/stream": ^0.36.0
-  checksum: 16705d45c38bb30464381639d16e742cf5dc397999553320f30c83f3309a2a381d51f5958c757e0ed7de0bc6c30ce873a2187da6ac93b92de1f44bcf84e66b0c
+  checksum: d2f8086f20c7e3e3f1bc8f4e86bcb9db89eaa38982dd9999a7987844e488a77a2677341a4a2cfe8497d0a3de2163906b9542d758929ca1804b7477a6fcd86b3f
   languageName: node
   linkType: hard
 
