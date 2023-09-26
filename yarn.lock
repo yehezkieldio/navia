@@ -236,19 +236,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@effect/data@npm:^0.18.5":
-  version: 0.18.5
-  resolution: "@effect/data@npm:0.18.5"
-  checksum: e8b4c1055a2f1d7e52e998e8493e3dd8106fdf510d7413585cf6d9ce8722acf4abb9541fcc57a9a3e6b0c7c01e177ffc485db4eb36a91b277b5d73a47578c653
+"@effect/data@npm:^0.18.6":
+  version: 0.18.6
+  resolution: "@effect/data@npm:0.18.6"
+  checksum: ce8b836a83fd9497a7914bc23658b896d432540246bb0cc12c5d18f4d55701b10527fcb3255142433a7c7d469a9bc665ec26d6e8d8991dc3cdd975c199939fa4
   languageName: node
   linkType: hard
 
-"@effect/io@npm:^0.40.3":
-  version: 0.40.3
-  resolution: "@effect/io@npm:0.40.3"
+"@effect/io@npm:^0.41.0":
+  version: 0.41.0
+  resolution: "@effect/io@npm:0.41.0"
   peerDependencies:
     "@effect/data": ^0.18.5
-  checksum: 1add88b51ae9c1943210e153da30fc564aca98419ef7f4303c908b7f1e1062045ad4925a961a54aacdc030988d88a6d81781260acf74a161f0422887253cf771
+  checksum: dee96cb28d5c96560724137937a264aa8e90d9789ebd4d5e32163f2e4a1af64589df68cf5c75dd862a848e174ccbab0e5704c3b019dd3226fdf509d4804a269e
   languageName: node
   linkType: hard
 
@@ -261,23 +261,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@effect/stm@npm:^0.24.0":
-  version: 0.24.0
-  resolution: "@effect/stm@npm:0.24.0"
+"@effect/stm@npm:^0.25.0":
+  version: 0.25.0
+  resolution: "@effect/stm@npm:0.25.0"
   peerDependencies:
-    "@effect/data": ^0.18.3
-    "@effect/io": ^0.40.0
-  checksum: 3bd463368c9d184f1764fb6d7788cdd884b25a5e19e6712b29c0662a2c0a544bf263e87ee784d67d57e5f8560ae97e17d3a515a8399eb743429a5f0f0ed06043
+    "@effect/data": ^0.18.6
+    "@effect/io": ^0.41.0
+  checksum: 04bbe2cedd5f4ff30c64391a85bac8bcd17080fc0b373c339752e75f8a4fda6d5a64f2c6441a53936a3e8020600c33a726782917c3dbd1ce57d0fcd0d80bd66c
   languageName: node
   linkType: hard
 
-"@effect/stream@npm:^0.36.1":
-  version: 0.36.1
-  resolution: "@effect/stream@npm:0.36.1"
+"@effect/stream@npm:^0.37.0":
+  version: 0.37.0
+  resolution: "@effect/stream@npm:0.37.0"
   peerDependencies:
-    "@effect/data": ^0.18.3
-    "@effect/io": ^0.40.0
-  checksum: 982a5df8da8e4d17247881da8920becb497a3b356bd2d7d12420108c8a3be8ea2bb19d6321e5618a66b6a643e934c32728f3771690e4463f6daae85020d8e50e
+    "@effect/data": ^0.18.6
+    "@effect/io": ^0.41.0
+  checksum: 5139d927f6167f05b0a8a7314b55cabd510ccb68b3e5f1b060ed34ff0948e5664e54bdc25a30352fe3af84cdb70f4709a481b0e1efd9fad4c8136995b9225887
   languageName: node
   linkType: hard
 
@@ -1520,21 +1520,21 @@ __metadata:
   linkType: hard
 
 "effect@npm:^2.0.0-next.30":
-  version: 2.0.0-next.34
-  resolution: "effect@npm:2.0.0-next.34"
+  version: 2.0.0-next.35
+  resolution: "effect@npm:2.0.0-next.35"
   dependencies:
-    "@effect/data": ^0.18.5
-    "@effect/io": ^0.40.3
+    "@effect/data": ^0.18.6
+    "@effect/io": ^0.41.0
     "@effect/match": ^0.35.2
-    "@effect/stm": ^0.24.0
-    "@effect/stream": ^0.36.1
+    "@effect/stm": ^0.25.0
+    "@effect/stream": ^0.37.0
   peerDependencies:
-    "@effect/data": ^0.18.5
-    "@effect/io": ^0.40.3
+    "@effect/data": ^0.18.6
+    "@effect/io": ^0.41.0
     "@effect/match": ^0.35.2
-    "@effect/stm": ^0.24.0
-    "@effect/stream": ^0.36.1
-  checksum: a5cde306a52d8124383004749be053d0f4989e84f4108971787effeeef6f77f2f8c0eb6062baaeace3f4278ae0a882aa487ff2ca9940f89eb0cab0bdf941c53c
+    "@effect/stm": ^0.25.0
+    "@effect/stream": ^0.37.0
+  checksum: d58a482252598fb984d2f5de314cd30d96adcebe72da644325b38e8b41458ddd23036f6e711d4e442e574506ffa2e4d82db5b13ac8ae1057bc6decfe10fec50f
   languageName: node
   linkType: hard
 
