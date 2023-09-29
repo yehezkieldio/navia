@@ -236,51 +236,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@effect/data@npm:^0.18.6":
-  version: 0.18.6
-  resolution: "@effect/data@npm:0.18.6"
-  checksum: ce8b836a83fd9497a7914bc23658b896d432540246bb0cc12c5d18f4d55701b10527fcb3255142433a7c7d469a9bc665ec26d6e8d8991dc3cdd975c199939fa4
-  languageName: node
-  linkType: hard
-
-"@effect/io@npm:^0.41.1":
-  version: 0.41.1
-  resolution: "@effect/io@npm:0.41.1"
-  peerDependencies:
-    "@effect/data": ^0.18.5
-  checksum: 382e94003a0749499920f581214e3c14498872ef00a56d2457299a63211faf1e00b3305458d2cc0253a1dafc0fe263ce07517293928db61e834f9f7ed1669c5c
-  languageName: node
-  linkType: hard
-
-"@effect/match@npm:^0.35.2":
-  version: 0.35.2
-  resolution: "@effect/match@npm:0.35.2"
-  peerDependencies:
-    "@effect/data": ^0.18.3
-  checksum: c010845d36d8305435e2eef99d8f0ee11ccde42641c28c9f19ed40b346ecce4ec31df784f9032a78d77603ea7e0004bb81a96e1de6924ba5c1f0fd728de36619
-  languageName: node
-  linkType: hard
-
-"@effect/stm@npm:^0.25.0":
-  version: 0.25.0
-  resolution: "@effect/stm@npm:0.25.0"
-  peerDependencies:
-    "@effect/data": ^0.18.6
-    "@effect/io": ^0.41.0
-  checksum: 04bbe2cedd5f4ff30c64391a85bac8bcd17080fc0b373c339752e75f8a4fda6d5a64f2c6441a53936a3e8020600c33a726782917c3dbd1ce57d0fcd0d80bd66c
-  languageName: node
-  linkType: hard
-
-"@effect/stream@npm:^0.37.0":
-  version: 0.37.0
-  resolution: "@effect/stream@npm:0.37.0"
-  peerDependencies:
-    "@effect/data": ^0.18.6
-    "@effect/io": ^0.41.0
-  checksum: 5139d927f6167f05b0a8a7314b55cabd510ccb68b3e5f1b060ed34ff0948e5664e54bdc25a30352fe3af84cdb70f4709a481b0e1efd9fad4c8136995b9225887
-  languageName: node
-  linkType: hard
-
 "@esbuild/android-arm64@npm:0.18.20":
   version: 0.18.20
   resolution: "@esbuild/android-arm64@npm:0.18.20"
@@ -1520,21 +1475,9 @@ __metadata:
   linkType: hard
 
 "effect@npm:^2.0.0-next.30":
-  version: 2.0.0-next.36
-  resolution: "effect@npm:2.0.0-next.36"
-  dependencies:
-    "@effect/data": ^0.18.6
-    "@effect/io": ^0.41.1
-    "@effect/match": ^0.35.2
-    "@effect/stm": ^0.25.0
-    "@effect/stream": ^0.37.0
-  peerDependencies:
-    "@effect/data": ^0.18.6
-    "@effect/io": ^0.41.0
-    "@effect/match": ^0.35.2
-    "@effect/stm": ^0.25.0
-    "@effect/stream": ^0.37.0
-  checksum: 23a1392eae172527c92c426d2512f44dcb1cbfcb4b9f39c1802fbea736a1a44dafdbb673d903f2dae8dd10478d0c99420396d8b580fafe2086763dc6d564d887
+  version: 2.0.0-next.37
+  resolution: "effect@npm:2.0.0-next.37"
+  checksum: 6abf629adaaffc44d71fd9e6a2e090c566c0c400224f31d32f1c9e5cd1acd9b66800c286c223e83a123a467d81169053784638380be5f7338db36be5c05ac64c
   languageName: node
   linkType: hard
 
