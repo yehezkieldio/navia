@@ -1475,9 +1475,9 @@ __metadata:
   linkType: hard
 
 "effect@npm:^2.0.0-next.30":
-  version: 2.0.0-next.40
-  resolution: "effect@npm:2.0.0-next.40"
-  checksum: ef87b882d7ee082712ed5f71aa73e8312f63fde7a8cf0f86b860aa4f234bb9059f49e9e9bed569ee2a2da3182e03fb4414b021745e47f774de1d4913cd56d4cc
+  version: 2.0.0-next.41
+  resolution: "effect@npm:2.0.0-next.41"
+  checksum: c06cfd2251725bbadda37d308291cef11551f2eb032b240ee901ba44a109850447e58bc0722a5cfe8c08e49f8d1b1400b5d585ab9fe2480cdded2b0566575257
   languageName: node
   linkType: hard
 
