@@ -653,12 +653,12 @@ __metadata:
   linkType: hard
 
 "@sapphire/plugin-subcommands@npm:^4.2.1":
-  version: 4.2.1
-  resolution: "@sapphire/plugin-subcommands@npm:4.2.1"
+  version: 4.2.2
+  resolution: "@sapphire/plugin-subcommands@npm:4.2.2"
   dependencies:
     "@sapphire/utilities": ^3.13.0
     tslib: ^2.6.2
-  checksum: 046ad26109b78c9a1a1904894ed9af864ae97847519ed680b67733378998df288d82d0c48b6e317bce312f78b971a309f83aef340bc4b32e070108850e787cad
+  checksum: a93a1034b333ef90935a446536df5d74daba08f0eca696e24d98ca369ee8b320e846ed92ba18329b968a09de27c628ba7283779f4c1ed3f42a88ff1ee2de18d1
   languageName: node
   linkType: hard
 
