@@ -668,14 +668,14 @@ __metadata:
   linkType: hard
 
 "@sapphire/discord.js-utilities@npm:^7.0.2":
-  version: 7.1.1
-  resolution: "@sapphire/discord.js-utilities@npm:7.1.1"
+  version: 7.1.2
+  resolution: "@sapphire/discord.js-utilities@npm:7.1.2"
   dependencies:
     "@sapphire/discord-utilities": ^3.2.0
     "@sapphire/duration": ^1.1.0
     "@sapphire/utilities": ^3.13.0
     tslib: ^2.6.2
-  checksum: 204547e695159207f4ad77b65ea2156d5a4860e8701d6a803e4e4ff38bd9b3f355b9be70bb2a8a828f1f57f42b11a832f53e606ab747d323821da97d7f990a5a
+  checksum: 429e7ae5a61eeacbdc70f89bac0772379d6026cd31e80811b6ff3b1ea56868083a8a0f938629a875fad20461fcebd19a1c622a792b3e1d87639bb77052ec4fce
   languageName: node
   linkType: hard
 
